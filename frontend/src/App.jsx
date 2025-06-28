@@ -13,7 +13,7 @@ function App() {
 
   const fetchTree = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/tree", {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/tree`, {
         repoUrl: url,
       });
       const paths = res.data.tree;
